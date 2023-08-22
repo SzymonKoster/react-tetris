@@ -8,12 +8,12 @@ services:
     volumes:
       - .:/usr/src/app
     ports:
-      -"8080:8080"
+      - "8080:8080"
 
 
   test:
     build:
       context: .
-      dockerfile: DOckerfile_test
+      dockerfile: Dockerfile_test
     volumes:
-      - .:usr/src/app
+      - .:/usr/src/app
