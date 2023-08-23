@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile_build
     volumes:
-      - .:/usr/src/app
+      - app-data:/usr/src/app
     ports:
       - "8081:8080"
 
@@ -16,4 +16,4 @@ services:
       context: .
       dockerfile: Dockerfile_test
     volumes:
-      - .:/usr/src/app
+      - app-data:/usr/src/app
