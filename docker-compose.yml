@@ -17,3 +17,6 @@ services:
       dockerfile: Dockerfile_test
     volumes:
       - app-data:/usr/src/app
+
+volumes:
+  app-data:
