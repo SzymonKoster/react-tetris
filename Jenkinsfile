@@ -23,9 +23,17 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'npm test' 
+                def testResult = sh(script: 'npm test', returnStatus: true)
+		if (testResult == 0) {
+			echo "Tests passed successfully!"
+		} else {
+			error "Tests failed!"
+		} 
             }
             post {
+		always {
+		    echo "tests completed."
+		}
                 success {
                     echo 'All tests passed!'
                 }
