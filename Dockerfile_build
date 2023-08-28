@@ -1,4 +1,4 @@
-#obraz Node.js
+# obraz Node.js
 FROM node:14
 
 WORKDIR /usr/src/app
