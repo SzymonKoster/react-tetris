@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: gra
-        image: gra-tetris:latest
+        image: szymkos/gra-tetris:latest
